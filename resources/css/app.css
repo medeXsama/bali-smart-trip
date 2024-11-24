@@ -1,0 +1,435 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #16c24f;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #16c24f;
+    border-radius: 0.375rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #16c24f;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #128739;
+}
+
+.btn-login {
+    background-color: #ffffff;
+    color: #16c24f;
+    border: 1px solid #16c24f;
+}
+
+.btn-login:hover {
+    background-color: #16c24f;
+    color: #ffffff;
+}
+
+.btn-register {
+    background-color: #ffffff;
+    color: #16c24f;
+    border: 1px solid #16c24f;
+}
+
+.btn-register:hover {
+    background-color: #16c24f;
+    color: #ffffff;
+}
+
+/* Forms */
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+    border-color: #16c24f;
+    box-shadow: 0 0 0 3px rgba(22, 194, 79, 0.3);
+    outline: none;
+}
+
+/* Landing Page */
+#landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #128739;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.main-title .highlight {
+    color: #16c24f;
+}
+
+.main-description {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+
+.btn-start {
+    background-color: #128739;
+    color: #ffffff;
+    border: 1px solid #128739;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-start:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(31, 41, 55, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Mulai dengan transparan */
+    pointer-events: none; /* Menghindari interaksi saat tersembunyi */
+    transition: opacity 0.3s ease; /* Efek transisi untuk fade */
+}
+
+.modal.show {
+    opacity: 1; /* Tampilkan modal dengan opasitas penuh */
+    pointer-events: all; /* Mengaktifkan interaksi saat muncul */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-buttons a {
+    margin: 0 0.5rem; /* Menambahkan jarak horizontal */
+}
+
+/* Tambahkan animasi pada konten modal */
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: slide-in 0.3s ease;
+}
+
+/* .hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+} */
+
+/* Success Message */
+.bg-green-500 {
+    background-color: #22c55e;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    color: #ffffff;
+}
+
+/* Container Form */
+form {
+    width: 100%;
+    max-width: 500px; /* Sesuaikan lebar maksimal form */
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan isi form */
+    gap: 1.5rem; /* Jarak antar elemen */
+}
+
+/* Card Button */
+.card-button-container {
+    display: flex;
+    gap: 1rem; /* Jarak antar card */
+    width: 100%; /* Sesuaikan dengan form */
+    justify-content: center; /* Pusatkan card */
+}
+
+.card-button {
+    flex: 1; /* Card akan menyesuaikan lebar form */
+    max-width: 220px; /* Tetapkan lebar maksimal card */
+    position: relative; /* Untuk mengatur posisi konten */
+}
+
+.card-button input[type="radio"] {
+    display: none; /* Sembunyikan elemen radio */
+}
+
+.card-content {
+    cursor: pointer;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Highlight */
+.card-button input[type="radio"]:checked + .card-content {
+    border-color: #16c24f; /* Border hijau */
+    box-shadow: 0 4px 10px rgba(22, 194, 79, 0.3); /* Highlight shadow */
+    background-color: #f0fdf4; /* Latar belakang hijau muda */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* Konten Card */
+.card-content h2 {
+    font-size: 1.1rem; /* Ukuran teks heading */
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.card-content p {
+    font-size: 0.9rem; /* Ukuran teks deskripsi */
+    color: #6b7280;
+}
+
+/* Modal Preferensi Spesifik (Dashboard) */
+#dashboardPreferenceModal {
+    position: fixed;
+    inset: 0;
+    display: none; /* Default tersembunyi */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang gelap */
+    z-index: 100;
+}
+
+#dashboardPreferenceModal.show {
+    display: flex; /* Tampilkan modal */
+}
+
+/* Konten Modal */
+#dashboardPreferenceModal .modal-content {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px; /* Lebar maksimal modal */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow lebih dramatis */
+    animation: fadeIn 0.3s ease-in-out; /* Efek animasi */
+}
+
+#dashboardPreferenceModal .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+#dashboardPreferenceModal .modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+#dashboardPreferenceModal button {
+    padding: 0.75rem 1.5rem;
+    background-color: #16c24f;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dashboardPreferenceModal button:hover {
+    background-color: #128739;
+}
+
+/* Efek animasi untuk modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card Pilihan di Dashboard */
+#dashboardPreferenceModal .card {
+    border: 2px solid #d1d5db; /* Border abu default */
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#dashboardPreferenceModal .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#dashboardPreferenceModal .card:hover {
+    transform: scale(1.05);
+    border-color: #16c24f; /* Border hijau saat hover */
+}
+
+#dashboardPreferenceModal .card.selected {
+    border-color: #128739; /* Border hijau tua untuk dipilih */
+    background-color: #f0fdf4; /* Background hijau muda untuk dipilih */
+    box-shadow: 0 4px 10px rgba(22, 194, 79, 0.2);
+}
+
+/* Heading dan Deskripsi dalam Card */
+#dashboardPreferenceModal .card h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+#dashboardPreferenceModal .card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Logout Button */
+.btn-logout {
+    padding: 0.5rem 1rem;
+    border: 1px solid #16c24f;
+    border-radius: 0.375rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #128739;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #16c24f;
+    box-shadow: 0 4px 10px rgba(22, 194, 79, 0.2);
+}
